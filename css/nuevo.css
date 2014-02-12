@@ -1,0 +1,270 @@
+	/****************************/
+	/*			FUENTES 		*/
+	/****************************/
+@font-face {
+    font-family: quattrocento;
+	src: url(quattrocentoSans.ttf) format('truetype');
+}
+@font-face {
+    font-family: ptSans;
+	src: url(OpenSans-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: OpenSans;
+	src: url('http://themes.googleusercontent.com/static/fonts/opensans/v5/cJZKeOuBrn4kERxqtaUH3aCWcynf_cDxXwCLxiixG1c.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: font1_negrita;
+	src: url(titulos.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: pakenham;
+	src: url(pakenham.ttf) format('truetype');
+}
+	/****************************/
+	/*			GENERAL 		*/
+	/****************************/
+body {
+    background: #D6B64C;
+    min-width: 450px;
+    max-width: 1260px;
+    margin: 0 auto;
+}
+	/****************************/
+	/*			HEADER  		*/
+	/****************************/
+header {
+    width: 97%;
+    min-width: 450px;
+    max-width: 1260px;
+    margin-left: 20px;
+}
+#cabecera {
+    margin-top: 8px;
+    padding: 14px 0px 0px 220px;
+    height: 62px;
+    font-family: pakenham;
+    color: #3E332F;
+    font-size: 30px;
+    text-align: left;
+    border: 0px;
+    border-radius: 13px 13px 0px 0px;
+    -moz-border-radius: 13px 13px 0px 0px;
+    -webkit-border-radius: 13px 13px 0px 0px;
+    -o-border-radius: 13px 13px 0px 0px;
+    background-image: url('../images/logo_blanco_20.png'), url('../images/titulo.png');
+    background-repeat: no-repeat, no-repeat;
+    background-position: 730px -49px, 0px 0px;
+    background-size: 400px, 179px;
+    background-color: #DDCB91;
+    line-height: 20px;
+}
+#negro {
+    padding-left: 20px;
+    padding-top: 4px;
+    margin-bottom: 25px;
+    text-align: left;
+    height: 30px;
+    border: 0px;
+    border-radius: 0px 0px 16px 16px;
+    -moz-border-radius: 0px 0px 16px 16px;
+    -webkit-border-radius: 0px 0px 16px 16px;
+    -o-border-radius: 0px 0px 16px 16px;
+    background-color: #3e332f;
+}
+#negro a {
+    /*font-family: font1_negrita;*/
+    color: white;
+    text-decoration: none;
+    font-size: 27px;
+}
+#negro a:hover {
+    color: #E3D193;
+    text-decoration: none;
+}
+#volver {
+    /*font-family: font1_negrita;*/
+    font-size: 29px;
+    padding-left: 20px;
+    line-height: 22px;
+	color: #FFFFFF;
+}
+#volver a {
+    /*color: #3e332f;*/
+    text-decoration: none;
+}
+#volver a:hover {
+    color: #a69488;
+}
+	/****************************/
+	/*			FOOTER  		*/
+	/****************************/
+#final_arriba {
+    /*font-family: font1_negrita;*/
+    font-size: 21px;
+    padding: 1px 0px 9px 45px;
+    line-height: 21px;
+}
+#final_arriba a {
+    color: white;
+    text-decoration: none;
+}
+#final_arriba a:hover {
+    color: #a69488;
+}
+footer {
+    clear: both;
+    width: 97%;
+    min-width: 450px;
+    max-width: 1260px;
+    margin-left: 20px;
+    margin-bottom: 21px;
+}
+#vacio_arriba {
+    margin-top: 39px;
+    height: 8px;
+    background: url('../images/arriba.png');
+    background-repeat: no-repeat;
+}
+#vacio_abajo {
+    height: 13px;
+    background: url('../images/abajo.png');
+    background-repeat: no-repeat;
+}
+#final_arriba {
+    padding: 1px 0px 0px 188px;
+    height: 24px;
+    color: white;
+    text-align: left;
+    border: 0px;
+    border-radius: 16px 16px 0px 0px;
+    -moz-border-radius: 16px 16px 0px 0px;
+    -webkit-border-radius: 16px 16px 0px 0px;
+    -o-border-radius: 16px 16px 0px 0px;
+    background: url('../images/medio_arriba.png');
+    background-repeat: no-repeat;
+    background-color: #3E332F;
+}
+#final_abajo {
+    padding: 4px 0px 0px 188px;
+    height: 32px;
+    font-family: quattrocento;
+    color: 3E332F;
+    font-size: 14px;
+    text-align: left;
+    border: 0px;
+    border-radius: 0 0 16px 16px;
+    -moz-border-radius: 0 0 16px 16px;
+    -webkit-border-radius: 0 0 16px 16px;
+    -o-border-radius: 0 0 16px 16px;
+    background: url('../images/medio_abajo.png');
+    background-repeat: no-repeat;
+    background-color: #e3d193;
+}
+	/****************************/
+	/*			SECTION  		*/
+	/****************************/
+section {
+    width: 97%;
+    min-width: 450px;
+    max-width: 1250px;
+    margin-left: 30px;
+    font-family: opensans;
+    font-size: 14px;
+    text-align: left;
+    color: black;
+}
+section a, #consulta a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #3C5391;
+}
+section a:hover {
+    color: #897973;
+}
+#titulillo {
+    font-family: pakenham;
+    font-size: 27px;
+    width: 500px;
+    border: 0px;
+    border-radius: 8px 8px 8px 8px;
+    background-color: #3e332f;
+    color: white;
+    padding: 2px 0px 6px 15px;
+    margin-top: 40px;
+    margin-bottom: 23px;
+}
+#codigo {
+    width: 800px;
+    font-size: 15px;
+    color: #3e332f;
+    padding: 1px 0px 1px 35px;
+    border-radius: 13px;
+    background-color: rgba(255,255,255,0.7);
+    box-shadow: 0px 0px 3px white;
+    margin-top: 17px;
+    margin-bottom: 20px;
+}
+#ejemplo1 {
+	width: 980px;
+	background-color: #EBE5D2;
+	border-radius: 12px;
+	padding: 15px 0px 24px 21px;
+}
+	/****************************/
+	/*			INDICE  		*/
+	/****************************/
+#indice {
+    width: 97%;
+    min-width: 450px;
+    max-width: 1250px;
+    margin-left: 20px;
+    font-family: quattrocento;
+    font-size: 16px;
+    background: url('../images/logo_blanco_10.png');
+    background-repeat: no-repeat;
+    background-size: 500px;
+    background-position: 550px -400px;
+    background-color: #DDCB91;
+    border-radius: 13px;
+    padding: 12px 0 19px 0;
+    margin-left: 25px;
+    margin-bottom: 23px;
+    margin-right: 20px;
+}
+#titulo_indice {
+    position: relative;
+    left: 25px;
+    top: -21px;
+    width: 200px;
+    height: 39px;
+}
+#indice a {
+    color: #595341;
+    text-decoration: none;
+}
+#indice a:hover {
+    color: black;
+}
+	/****************************/
+	/*			COLORES  		*/
+	/****************************/
+.rojo {
+    color: #DF0101;
+}
+
+.verde {
+    color: #027702;
+}
+
+.azul {
+    color: blue;
+}
+
+.gris {
+    color: #766B48;
+}
+
