@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Práctica 2: Comma Separated Value Analyzer</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link rel="shortcut icon" href="images/logo.png">
+	<!-- CSS -->
+	<link href="css/nuevo.css" rel="stylesheet" type="text/css" />
+	<link href="css/estilo.css" rel="stylesheet" type="text/css" />
+	<!-- JAVASCRIPT -->
+
+</head>
+<body> 
+
+	<header>
+		<div id="cabecera">
+			Práctica 2 : Comma Separated Value (CSV) Analyzer <span style="font-size:19px;color:gray"> Asignatura:</span> Procesadores de Lenguajes<br>
+			<span style="font-size:22px; color:#553529">Profesor: Casiano Rodríguez León</span>
+		</div>
+		<div id="negro">
+			<div id="volver">
+				<a href="http://mdbgalvan.github.io/" target="_blank">alu3299</a>
+			</div>	
+		</div>
+	</header>
+	
+	<div id="indice">
+		<div id="titulo_indice"><img src="images/indice_cortado.png"></div>
+		<dd>
+				<li><a href="#punto1">Explicación</a></li>
+				<li><a href="#punto2">Práctica 2 : Comma Separated Value Analyzer</a></li>
+				<li><a href="#punto3">Tests</a></li>
+		</dd>
+	</div>
+
+	<hr>
+	
+	<section>
+	
+		<!-- EXPLICACIÓN -->
+		<p id="punto1"></p>
+		
+		<div id="titulillo">
+			<span style="color:#CCC2A0;font-size:28px">• </span>Explicación
+		</div>
+		
+		<p>Para esta práctica, además de lo practicado en la <b><a href="http://mdbgalvan.github.io/PL_LAB01/" target="_blank">
+		práctica anterior</a></b> (<b>HTML</b>, <b>JavaScript</b>, <b>Mocha</b>, <b>Chai</b>, expresiones regulares, ...) se utilizarán: 
+		los protocolos que almacenan datos en un navegador web 
+		(<b><a href="http://fernetjs.com/2012/12/almacenando-en-el-cliente-localstorage-sessionstorage-y-cookies/" target="_blank">
+		LocalStorage y SessionStorage</a></b> y la API de <b>HTML5</b> en <b>JavaScript</b> que lo maneja), la librería de <b>JavaScript</b>,
+		<b><a href="http://hardcoders.mx/blog/2013/01/08/templates-con-underscore-dot-js/" target="_blank">Underscore.js</a></b>, 
+		y para el intercambio de datos el formato <b><a href="http://geekytheory.com/json-i-que-es-y-para-que-sirve-json/" target="_blank">JSON</a></b>
+		(JavaScript Object Notation).</p>
+	
+		<!-- PRÁCTICA 1 -->
+		<p id="punto2"></p>
+		
+		<div id="titulillo">
+			<span style="color:#CCC2A0;font-size:28px">• </span>Práctica 2 : Comma Separated Value Analyzer
+		</div>
+		
+		<p>A continuación, se muestra un área dedicada a introducir un texto en formato <b>Comma Separated Value (CSV)</b>. Es decir, 
+		se puede introducir un texto separados por comas, teniendo en cuenta, que el número de columnas debe ser igual para todos los
+		registros. Si no fuera así, se avisaría del problema.</p>
+		
+		<textarea rows="7" placeholder="String CSV" autofocus></textarea>
+		
+		<br><br>
+		
+		<input type="Button" value="Convertir" onClick="calculate()" class="myButton"><label for="name">
+		
+		<table border=0>
+			<tr>
+				<td></td>
+				<th>Columna1</td>
+				<th>Columna2</td>
+				<th>Columna3</td>
+			</tr>
+			<tr>
+				<th>Registro1</th>
+				<td>-</td>
+				<td>+3.5</td>
+				<td>+4.0</td>
+			</tr>
+			<tr>
+				<th>Registro2</th>
+				<td>+3.0</td>
+				<td>+3.0</td>
+				<td>+3.0</td>
+			</tr>
+		</table>
+		
+		
+
+		<!-- TESTS -->
+		<p id="punto2"></p>
+		
+		<div id="titulillo">
+			<span style="color:#CCC2A0;font-size:28px">• </span>Tests 
+		</div>
+		
+		<p>Una vez realizado toda la práctica, se creó unas pruebas para verificar el correcto cumplimiento de nuestro código en 
+		<b>javaScript</b>. Para ello, se siguieron los mismos pasos que en la práctica anterior.
+
+		<p>El enlace donde se puede observar los tests son: <b><a href="http://mdbgalvan.github.io/PL_LAB02/tests/" target="_blank">aquí</a></b>.</p>
+		
+	<footer>
+		<div id="vacio_arriba"></div>
+		<div id="final_arriba">
+			<a href="http://mdbgalvan.github.io/" target="_blank">Volver a la Página Principal</a>
+		</div>
+		<div id="final_abajo">
+			Realizado por: María D. Batista Galván
+		</div>
+		<div id="vacio_abajo"></div>	
+	</footer>
+	
+</body>
+</html>
