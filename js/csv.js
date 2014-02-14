@@ -22,7 +22,8 @@ function calculate() {
         if (m) {													// Si caza algo
             if (commonLength && (commonLength != m.length)) {		// Controla si el nº de col coincide con el anterior bien, sino da error 
                 //alert('ERROR! row <'+temp+'> has '+m.length+' items!');	
-				reg.push(parseInt(t)+1);							// Se añade el registro que no cumple con el nº de columnas
+																	// Se añade el registro que no cumple con el nº de columnas
+				$("#header_Y").is(":checked") ? reg.push(parseInt(t)) : reg.push(parseInt(t)+1);	
                 error = true;
             } else {
                 commonLength = m.length;							// Guarda el nº de columnas del CSV del registro t
@@ -35,7 +36,7 @@ function calculate() {
                 var removeescapedquotes = removelastquote.replace(/\\"/, '"');	// Reemplaza \" por "
                 result.push(removeescapedquotes);								// El item limpio se añade a result
             }
-			if ((t == "0") && (document.getElementById("header_Y").checked)){	// JSON que almacena los valores del encabezado si está seleccionado
+			if ((t == "0") && ($("#header_Y").is(":checked"))){					// JSON que almacena los valores del encabezado si está seleccionado
 				h.push({
 					value: result
 				});
