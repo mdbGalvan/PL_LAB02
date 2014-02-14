@@ -243,6 +243,7 @@ table td {
 }
 
 th.error  { background-color: #FA5858; }
+td.even { background-color: #D8D8D8; }
 
 	/****************************/
 	/*			INDICE  		*/

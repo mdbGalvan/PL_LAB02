@@ -34,20 +34,33 @@ function calculate() {
                 var removeescapedquotes = removelastquote.replace(/\\"/, '"');	// Reemplaza \" por "
                 result.push(removeescapedquotes);								// El item limpio se añade a result
             }
+			var error = error ? 'error' : '';									// Sirve para saber que registro tiene error, que se guardará en el JSON
+			var parity = (parseInt(t)+1) % 2 == 0 ? 'even' : 'odd';				// Devuelve si es registro par o impar, y así pintar distinto el td
+            r.push({
+				parity: parity,
+				error: error,
+				register: (parseInt(t)+1),
+                value: result
+            });
 			// UnderScore
-            var tr = error ? '<tr><th class="error">Registro ' + (parseInt(t)+1) + '</th>' : '<tr><th>Registro ' + (parseInt(t)+1) + '</th>';
-            r.push(tr + _.template(row, {
-                items: result
-            }) + "</tr>");
+            //var tr = error ? '<tr><th class="error">Registro ' + (parseInt(t)+1) + '</th>' : '<tr><th>Registro ' + (parseInt(t)+1) + '</th>';
+            //r.push(tr + _.template(row, {
+            //    items: result
+            //}) + "</tr>");
         } else {													// Sino caza nada al inicio devuelve un error
             alert('ERROR! row ' + temp + ' does not look as legal CSV');
             error = true;
         }
     }
-    r.unshift('<table border=0>');									// Añade al inicio del array
-    r.push('</table>');												// Añade al final
+    //r.unshift('<table border=0>');									// Añade al inicio del array
+    //r.push('</table>');												// Añade al final
     //alert(r.join('\n')); // debug
-    finaltable.innerHTML = r.join('\n');							// Convierte el array r en string separados por salto de línea cada elemento, y lo añade en id=finaltable
+    //finaltable.innerHTML = r.join('\n');							// Convierte el array r en string separados por salto de línea cada elemento, y lo añade en id=finaltable
 	reg.length == 1 ? registro.innerHTML = 'El registro ' : registro.innerHTML = 'Los registros ';
 	registro.innerHTML += reg.join(', ') + ' no tiene el nº de columnas correcta.';	
+	
+	var template = lista.innerHTML;
+    finaltable.innerHTML = _.template(template, {
+        items: r
+    });
 }
