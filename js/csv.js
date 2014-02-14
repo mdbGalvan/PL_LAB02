@@ -58,7 +58,7 @@ function calculate() {
         }
     }
 	reg.length == 1 ? registro.innerHTML = 'El registro ' : registro.innerHTML = 'Los registros ';
-	registro.innerHTML += reg.join(', ') + ' no tiene el nº de columnas correcta.';	
+	registro.innerHTML += reg.join(', ') + ' no tiene el número de columnas correcta.';	
 	if (reg.length == 0) registro.innerHTML = 'La conversión ha sido correcta.';
 	
 	// Underscore
