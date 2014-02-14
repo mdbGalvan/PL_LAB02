@@ -11,7 +11,9 @@
 	<link href="css/nuevo.css" rel="stylesheet" type="text/css" />
 	<link href="css/estilo.css" rel="stylesheet" type="text/css" />
 	<!-- JAVASCRIPT -->
-
+	<script type="text/javascript" src="js/csv.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 </head>
 <body> 
 
@@ -67,35 +69,14 @@
 		se puede introducir un texto separados por comas, teniendo en cuenta, que el número de columnas debe ser igual para todos los
 		registros. Si no fuera así, se avisaría del problema.</p>
 		
-		<textarea rows="7" placeholder="String CSV" autofocus></textarea>
+		<textarea rows="7" id="textArea" placeholder="String CSV" autofocus></textarea>
 		
 		<br><br>
 		
 		<input type="Button" value="Convertir" onClick="calculate()" class="myButton"><label for="name">
 		
-		<table border=0>
-			<tr>
-				<td></td>
-				<th>Columna1</td>
-				<th>Columna2</td>
-				<th>Columna3</td>
-			</tr>
-			<tr>
-				<th>Registro1</th>
-				<td>-</td>
-				<td>+3.5</td>
-				<td>+4.0</td>
-			</tr>
-			<tr>
-				<th>Registro2</th>
-				<td>+3.0</td>
-				<td>+3.0</td>
-				<td>+3.0</td>
-			</tr>
-		</table>
+		<br><span class="output" id="finaltable"></span>
 		
-		
-
 		<!-- TESTS -->
 		<p id="punto2"></p>
 		
