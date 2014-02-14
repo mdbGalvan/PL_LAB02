@@ -1,8 +1,8 @@
 ***
 >**Autora:**         *María D. Batista Galván*  
->**Fecha:**          *Domingo 14 de Febrero de 2014*  
+>**Fecha:**          *Viernes 14 de Febrero de 2014*  
 >**Asignatura:**     *Procesadores de Lenguajes.*  
->**Práctica 2:**       **Comma Separated Values (CSV)**  
+>**Práctica 2:**       **Comma Separated Values (CSV) Analyzer**  
 ***
 
 ##Introducción
