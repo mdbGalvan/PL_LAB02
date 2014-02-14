@@ -4,11 +4,60 @@
     <title>Mocha</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- CSS -->
     <link rel="stylesheet" href="mocha.css" />
+	<link href="../css/nuevo.css" rel="stylesheet" type="text/css" />
+	<link href="../css/estilo.css" rel="stylesheet" type="text/css" />
+	<!-- JAVASCRIPT -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script type="text/html" id='lista'>
+		<table border=0>
+			<% _.each(header, function(data) { %>
+				<tr>
+					<td class="empty"></td>
+					<% _.each(data.value, function(cell) { %>
+						<th><%= cell %></th>
+					<% }); %>
+				</tr>
+			<% }); %>
+			<% _.each(items, function(data) { %>
+				<tr>
+					<th class="<%= data.error %>">Registro <%= data.register%></th>
+					<% _.each(data.value, function(cell) { %>
+						<td class="<%= data.parity%>"><%= cell %></td>
+					<% }); %>
+				</tr>
+			<% }); %>
+		</table>
+    </script>
   </head>
   <body>
     <div id="mocha"></div>
 	
+		<!-- Mi index.html principal -->
+		<table border="0">
+			<tr>
+				<td class="empty">
+					<form>
+						<fieldset>
+							<legend>Opciones:</legend>
+							<input type="radio" name="group1" id="header_Y" value="Con Encabezado" checked>Con Encabezado<br>
+							<input type="radio" name="group1" id="header_N" value="Sin Encabezado">Sin Encabezado<br>
+						</fieldset>
+						<br>
+						<input type="Button" value="Convertir" onClick="calculate()" class="myButton"><label for="name"><br>
+					</form>
+				</td>
+				<td width="100px" class="empty"></td>
+				<td class="empty"><textarea rows="7" id="textArea" placeholder="String CSV" autofocus></textarea></td>
+			</tr>
+		</table>
+		
+		<br><span class="output" id="finaltable"></span>
+		
+		<p id="registro"></p>
+		<!-- Fin -->	
 	
 	<script src="http://chaijs.com/chai.js"></script> <!-- Add chai.js -->
     <script src="mocha.js"></script>
