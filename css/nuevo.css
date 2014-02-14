@@ -216,14 +216,14 @@ section a:hover {
 }
 
 table {
-    width: 30%;
+    width: 50%;
 	margin-left: auto;
     margin-right: auto;
 }
 
 table th {
     text-align: center;
-    width: 10%;
+    width: 25%;
     font-family: font1_negrita;
     font-size: 17px;
     border: 1px solid rgba(0,0,0,0.3);
@@ -239,7 +239,11 @@ table td {
     font-family: ptsans;
     font-size: 14px;
     text-align: center;
+	background: #eae0c2;
 }
+
+th.error  { background-color: #FA5858; }
+
 	/****************************/
 	/*			INDICE  		*/
 	/****************************/

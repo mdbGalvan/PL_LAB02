@@ -8,6 +8,7 @@ function calculate() {
     var lines = temp.split(/\n+\s*/); 								// Array cuyos elementos son un string con cada fila
     var commonLength = NaN;
     var r = [];														// Almacena cada elemento del underscore
+	var reg = [];													// Almacena el nº de registros con errores
     // Template using underscore
     var row = "<% _.each(items, function(name) { %><td><%= name %></td><% }); %>";	// UnderScore, template para el formato de la tabla
 
@@ -18,8 +19,9 @@ function calculate() {
         var error = false;											
 
         if (m) {													// Si caza algo
-            if (commonLength && (commonLength != m.length)) {					// Controla si el nº de col coincide con el anterior, sino da error 
-                //alert('ERROR! row <'+temp+'> has '+m.length+' items!');		
+            if (commonLength && (commonLength != m.length)) {					// Controla si el nº de col coincide con el anterior bien, sino da error 
+                //alert('ERROR! row <'+temp+'> has '+m.length+' items!');	
+				reg.push(parseInt(t)+1);							// Se añade el registro que no cumple con el nº de columnas
                 error = true;
             } else {
                 commonLength = m.length;							// Guarda el nº de columnas del CSV del registro t
@@ -33,7 +35,7 @@ function calculate() {
                 result.push(removeescapedquotes);								// El item limpio se añade a result
             }
 			// UnderScore
-            var tr = error ? '<tr class="error"><th>Registro' + t + '</th>' : '<tr><th>Registro' + t + '</th>';
+            var tr = error ? '<tr><th class="error">Registro ' + (parseInt(t)+1) + '</th>' : '<tr><th>Registro ' + (parseInt(t)+1) + '</th>';
             r.push(tr + _.template(row, {
                 items: result
             }) + "</tr>");
@@ -46,4 +48,6 @@ function calculate() {
     r.push('</table>');												// Añade al final
     //alert(r.join('\n')); // debug
     finaltable.innerHTML = r.join('\n');							// Convierte el array r en string separados por salto de línea cada elemento, y lo añade en id=finaltable
+	reg.length == 1 ? registro.innerHTML = 'El registro ' : registro.innerHTML = 'Los registros ';
+	registro.innerHTML += reg.join(', ') + ' no tiene el nº de columnas correcta.';	
 }

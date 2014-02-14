@@ -2,7 +2,8 @@
 p {text-align:justify; /*text-indent:50px;*/}
 p.italic {font-style:italic;}
 p.oblique {font-style:oblique;}
-p#note{font-size: 12px;font-style:italic;}
+p#note{font-size: 12px; font-style:italic;}
+p#registro{color: red; font-weight: bold;}
 
 ul {	margin-bottom: 40px;}
 
