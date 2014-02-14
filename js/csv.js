@@ -11,6 +11,8 @@ function calculate() {
 	var h = [];														// Almacena cada elemento del encabezado, JSON
 	var reg = [];													// Almacena el nº de registros con errores
 
+	if (window.localStorage) localStorage.textArea = temp;			// Si el navegador lo soporta almacenamos en el localStorage los datos introducidos
+	
     for (var t in lines) {											// Recorre cada línea (no incluye los saltos de línea sin datos)
         var temp = lines[t];										// Almacena en m toda la línea t
         var m = temp.match(regexp);									// Array que contiene en cada elemento todo lo cazado en la línea
@@ -66,3 +68,9 @@ function calculate() {
         items: r	// El resto		
     });
 }
+
+window.onload = function() {										// Cuando se cargue la página se ejecuta lo que está aquí dentro
+    if (window.localStorage && localStorage.textArea) {				// Si el navegador soporta localStorage y tenemos algo almacenado, pues lo cargamos en el textarea
+        document.getElementById("textArea").value = localStorage.textArea;
+    }
+};
